@@ -1,4 +1,4 @@
-#TASK2
+# TASK2
 
 I was learning cryptography while doing all Cryptopals challenges. I did this readme so I can remember what I wrote. 
 I know I could have resolved this challenge (and the other ones) quickier and easier, but I really wanted to decompose my code in little steps for a better understanding. 
