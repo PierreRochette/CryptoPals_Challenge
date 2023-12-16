@@ -3,14 +3,30 @@
 I was learning cryptography while doing all Cryptopals challenges. I did this readme so I can remember what I wrote. 
 I know I could have resolved this challenge (and the other ones) quickier and easier, but I really wanted to decompose my code in little steps for a better understanding. 
 
-Starting from now, everything will be written in French. Maybe I will translate it in english later. 
+Starting from now, everything will be written in French. Maybe I will translate it in english later.
+
+## A PROPOS DE "XOR"
+
+Pour deux bits donnés, XOR produit un "1" si les bits sont différents (0 et 1 par exemple) et 0 si les bits sont identiques. 
+
+XOR est largement utilisé en cryptographie pour le chiffrement et le déchiffrement, car il a la propriété d'être réversible. Si on XOR une valeur A avec une valeur B puis qu'on XOR le résultat avec B à nouveau, on obtient la valeur originale A. 
+
+Elle est par exemple, utilisé dans des contextes de chiffrement et déchiffrement. 
+
+__*Exemple du chiffrement et déchiffrement de messages__
+
+On convertit un message en format héxadécimal. On choisit une clé hexadécimale connue par le sender et le destinataire du message. 
+
+On effectue une opération XOR entre le message hexadécimal et la clé. Le résultat est une nouvelle chaîne hexadécimale qui est le message chiffré. 
+
+Le destinaire du message, qui possède la même clef, effectue à nouveau une opération XOR entre le message chiffré et la clef. Cette opération restaurera le message originel, puisque XOR est une opération reversible. 
 
 ## STEP 1
 
 Il faut d'abord convertir les deux valeurs héxadécimales fournies dans l'énoncé. 
 
 Hex 1 : 1c0111001f010100061a024b53535009181c
-Hex 2 : 686974207468652062756c6c277320657965
+Key : 686974207468652062756c6c277320657965
 
 Pour effectuer des opérations mathématiques ou logiques, comme XOR, il est plus pratique de les convertir en entiers. Une fois converties, ces valeurs peuvent être traitées comme des nombres binaires, permettant de réaliser l'opération XOR de façon appropriée. C'est une pratique courante dans pour une plus grande simplicité et lisibilité du code. 
 

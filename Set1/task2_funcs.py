@@ -28,4 +28,4 @@ def XOR(binvalue1, binvalue2) :
 ## STEP 4.2 : Convert list result to string
 
 def list_to_string(list) : 
-    return "".
+    return "".join(str(bit) for bit in list)

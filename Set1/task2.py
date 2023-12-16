@@ -23,7 +23,13 @@ bin_value2 = bin_value2.zfill(desired_length)
 result = [int(bit1) ^ int(bit2) for bit1,bit2 in zip(bin_value1,bin_value2)]
 
 string_result = "".join([str(bits) for bits in result])
+print("String result : (provided)", string_result)
+print(type(string_result))
+
+
+string_result = "".join(str(bit) for bit in result)
+print("String result (test) : ", string_result)
+print(type(string_result))
 
 #step 5
 final_output = hex(int(string_result, 2))[2:]
-print(final_output)
