@@ -26,4 +26,26 @@ On utilise ici la fonction bin(value) pour convertir les hexadécimaux obtenus p
 
 ## STEP 3 
 
-On aligne ensuite la longueur des deux valeurs binaires pour qu'elles soient égales 
+On aligne ensuite la longueur des deux valeurs binaires obtenues avant d'effectuer l'opération XOR. 
+
+On choisit la plus grande longueur. L'objectif est de s'assurer que les deux chaînes binaires ont suffisamment de bits. En choisissant la plus grande longueur, on garantit que tous les bits des deux chaînes sont pris en compte dans l'opération XOR. Les bits supplémentaires (s'il y en a) de la chaîne la plus longue sont conservés et des "0" sont ajoutés au début de la chaîne la plus courte pour l'aligner. 
+
+On définit d'abord la valeur à choisir avec un if..else, on stocke le résultat obtenu dans une variable (desired_length) et on utilise ensuite la fonction zfill sur chacune des valeurs binaires, avec comme paramètre la variable desired_length. 
+
+__Pourquoi égaliser la longueur des valeurs binaires ?__
+
+XOR compare bit par bit : il faut que les valeurs aient le même nombre de bits. En ajoutant des zéros au début de la chaîne la plus courte, on aligne les deux chaînes en longueur. Les 0 ajoutés n'affectent pas le résultat de l'opération XOR. 
+
+__Cela garantit que l'opération XOR est effectuée correctement sur chaque paire de bits__
+
+## STEP 4
+
+* On utilise ensuite la fonction zip() de Python, avec les deux valeurs binaires afin de créer des paires de bits. 
+
+* On réalise l'opération XOR en convertissant chaque bit en entier, et on itère l'opération pour chaque paire de bits. 
+
+* On stocke le résultat obtenu sous forme de liste (compréhension de liste). Il faut ensuite convertir ce résultat en string. 
+
+## STEP 5
+
+On convertit le résultat obtenu en valeur héxadécimale et on supprime les deux premiers caractères. 
