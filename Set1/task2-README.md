@@ -30,7 +30,7 @@ Key : 686974207468652062756c6c277320657965
 
 Pour effectuer des opérations mathématiques ou logiques, comme XOR, il est plus pratique de les convertir en entiers. Une fois converties, ces valeurs peuvent être traitées comme des nombres binaires, permettant de réaliser l'opération XOR de façon appropriée. C'est une pratique courante dans pour une plus grande simplicité et lisibilité du code. 
 
-On utilise ici la fonction int(hex, base) où base est égal à 16. 
+On utilise ici la fonction int(hex, base) où base est égal à 16, car hex est un système numérique composé de 16 symboles. 
 
 ## STEP 2
 
@@ -64,4 +64,4 @@ __Cela garantit que l'opération XOR est effectuée correctement sur chaque pair
 
 ## STEP 5
 
-On convertit le résultat obtenu en valeur héxadécimale et on supprime les deux premiers caractères. 
+On convertit le résultat obtenu d'abord en nombre entier en base 2 (puisque les binaires sont en base 2). Puis ont convertir l'entier obtenu en nombre hexadécimal et on enlève le préfixe. 
